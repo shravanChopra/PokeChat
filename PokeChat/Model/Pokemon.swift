@@ -17,4 +17,12 @@ class Pokemon {
         _id = id
         _name = name
     }
+    
+    public var id: String {
+        get { return _id }
+    }
+
+    public var name: String {
+        get {return _name }
+    }
 }
