@@ -61,6 +61,9 @@
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="M9h-aH-3NE" kind="show" id="PHU-iU-56y"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -88,6 +91,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="429.375" y="34.859154929577464"/>
+        </scene>
+        <!--Poke AvatarVC-->
+        <scene sceneID="nhc-6u-0du">
+            <objects>
+                <viewController id="M9h-aH-3NE" customClass="PokeAvatarVC" customModule="PokeChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MBB-Kq-Cfc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yay-UB-zru">
+                                <rect key="frame" x="0.0" y="64" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JxD-c8-D3i">
+                                <rect key="frame" x="0.0" y="120" width="320" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DAs-Vc-0Vg">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dYe-9K-6Hn">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yay-UB-zru" firstAttribute="leading" secondItem="nzs-7b-cCJ" secondAttribute="leading" id="5Q3-gP-A3l"/>
+                            <constraint firstItem="JxD-c8-D3i" firstAttribute="top" secondItem="yay-UB-zru" secondAttribute="bottom" id="8cA-8A-NtC"/>
+                            <constraint firstItem="yay-UB-zru" firstAttribute="trailing" secondItem="nzs-7b-cCJ" secondAttribute="trailing" id="B71-DW-mkt"/>
+                            <constraint firstItem="yay-UB-zru" firstAttribute="top" secondItem="nzs-7b-cCJ" secondAttribute="top" id="CsY-JY-RIR"/>
+                            <constraint firstItem="JxD-c8-D3i" firstAttribute="bottom" secondItem="nzs-7b-cCJ" secondAttribute="bottom" id="HyY-f5-Vxh"/>
+                            <constraint firstItem="JxD-c8-D3i" firstAttribute="leading" secondItem="nzs-7b-cCJ" secondAttribute="leading" id="SbO-tx-cei"/>
+                            <constraint firstItem="JxD-c8-D3i" firstAttribute="trailing" secondItem="nzs-7b-cCJ" secondAttribute="trailing" id="m9g-bb-8Mq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nzs-7b-cCJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qox-rc-nnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1411.875" y="39.08450704225352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QFG-KM-6af">
