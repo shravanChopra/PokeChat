@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>830313748876-qrqarecen7cdg29cd22ocjm1masl1c53.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.830313748876-qrqarecen7cdg29cd22ocjm1masl1c53</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBtrQSf4OMe4vR8jlV4mY7Uw5Pfdgk1mfk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>830313748876</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.myowntime.PokeChat</string>
+	<key>PROJECT_ID</key>
+	<string>pokechat-d2842</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pokechat-d2842.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:830313748876:ios:14bc0ea9fcc11aff</string>
+	<key>DATABASE_URL</key>
+	<string>https://pokechat-d2842.firebaseio.com</string>
+</dict>
+</plist>
