@@ -8,21 +8,28 @@
 
 import UIKit
 
-class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
     // to store pokemon data
     var pokemon: [Pokemon]!
     @IBOutlet weak var pokemonCollectionView: UICollectionView!
     
+    // to implement search-filtering
+    @IBOutlet weak var searchBar: UISearchBar!
+    var filteredPokemon: [Pokemon]!
+    var inSearchMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        // set this VC as datasource and delegate
+        // set this VC as datasource and delegate of collection view
         pokemonCollectionView.dataSource = self
         pokemonCollectionView.delegate = self
+
+        // set this VC as delegate of search bar
+        searchBar.delegate = self
         
         // load pokemon data
         pokemon = loadPokemonData()
@@ -72,6 +79,11 @@ class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if inSearchMode {
+            return filteredPokemon.count
+        }
+        
         return pokemon.count
     }
     
@@ -79,7 +91,13 @@ class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         
         if let pokeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
-            pokeCell.configure(from: pokemon[indexPath.row])
+            if inSearchMode {
+                pokeCell.configure(from: filteredPokemon[indexPath.row])
+            }
+            else {
+                pokeCell.configure(from: pokemon[indexPath.row])
+            }
+            
             return pokeCell
         }
         
@@ -94,5 +112,23 @@ class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: 110, height: 110)
+    }
+    
+    // -------------------------------------------------------------------------------------------
+    
+    // MARK - implementing search filtering
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            pokemonCollectionView.reloadData()
+        }
+        else {
+            inSearchMode = true
+            
+            let lower = searchBar.text!.lowercased()
+            filteredPokemon = pokemon.filter({ $0.name.range(of: lower) != nil })
+            pokemonCollectionView.reloadData()
+        }
     }
 }
