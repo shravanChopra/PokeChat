@@ -101,13 +101,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeBG2" translatesAutoresizingMaskIntoConstraints="NO" id="vQ0-rI-BGS">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
                             <searchBar contentMode="redraw" placeholder="Enter Pokemon name" translatesAutoresizingMaskIntoConstraints="NO" id="yay-UB-zru">
                                 <rect key="frame" x="0.0" y="64" width="320" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JxD-c8-D3i">
                                 <rect key="frame" x="0.0" y="120" width="320" height="448"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DAs-Vc-0Vg">
                                     <size key="itemSize" width="102" height="108"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -141,6 +144,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="YmO-kg-SC8" firstAttribute="centerX" secondItem="dYe-9K-6Hn" secondAttribute="centerX" id="1BH-yx-ggp"/>
                                             <constraint firstItem="I9h-yg-NKl" firstAttribute="leading" secondItem="dYe-9K-6Hn" secondAttribute="leading" id="3mJ-Vv-yhq"/>
@@ -165,6 +169,10 @@
                             <constraint firstItem="yay-UB-zru" firstAttribute="top" secondItem="nzs-7b-cCJ" secondAttribute="top" id="CsY-JY-RIR"/>
                             <constraint firstItem="JxD-c8-D3i" firstAttribute="bottom" secondItem="nzs-7b-cCJ" secondAttribute="bottom" id="HyY-f5-Vxh"/>
                             <constraint firstItem="JxD-c8-D3i" firstAttribute="leading" secondItem="nzs-7b-cCJ" secondAttribute="leading" id="SbO-tx-cei"/>
+                            <constraint firstItem="vQ0-rI-BGS" firstAttribute="trailing" secondItem="nzs-7b-cCJ" secondAttribute="trailing" id="VPT-5a-rtk"/>
+                            <constraint firstItem="vQ0-rI-BGS" firstAttribute="top" secondItem="nzs-7b-cCJ" secondAttribute="top" id="W48-F7-IRX"/>
+                            <constraint firstItem="vQ0-rI-BGS" firstAttribute="leading" secondItem="nzs-7b-cCJ" secondAttribute="leading" id="WiR-53-49v"/>
+                            <constraint firstItem="vQ0-rI-BGS" firstAttribute="bottom" secondItem="nzs-7b-cCJ" secondAttribute="bottom" id="cyW-57-Y9m"/>
                             <constraint firstItem="JxD-c8-D3i" firstAttribute="trailing" secondItem="nzs-7b-cCJ" secondAttribute="trailing" id="m9g-bb-8Mq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nzs-7b-cCJ"/>
@@ -199,5 +207,6 @@
     </scenes>
     <resources>
         <image name="1" width="96" height="96"/>
+        <image name="pokeBG2" width="168" height="300"/>
     </resources>
 </document>
