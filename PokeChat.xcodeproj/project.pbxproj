@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E09EB6B1FF2B77A00501950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09EB6A1FF2B77A00501950 /* AppDelegate.swift */; };
-		0E09EB6D1FF2B77A00501950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09EB6C1FF2B77A00501950 /* ViewController.swift */; };
+		0E09EB6D1FF2B77A00501950 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09EB6C1FF2B77A00501950 /* WelcomeVC.swift */; };
 		0E09EB701FF2B77A00501950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E09EB6E1FF2B77A00501950 /* Main.storyboard */; };
 		0E09EB721FF2B77A00501950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E09EB711FF2B77A00501950 /* Assets.xcassets */; };
 		0E09EB751FF2B77A00501950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E09EB731FF2B77A00501950 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		0E09EB671FF2B77A00501950 /* PokeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E09EB6A1FF2B77A00501950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E09EB6C1FF2B77A00501950 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E09EB6C1FF2B77A00501950 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		0E09EB6F1FF2B77A00501950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E09EB711FF2B77A00501950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E09EB741FF2B77A00501950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,15 +63,39 @@
 		0E09EB691FF2B77A00501950 /* PokeChat */ = {
 			isa = PBXGroup;
 			children = (
-				0E09EB6A1FF2B77A00501950 /* AppDelegate.swift */,
-				0E09EB6C1FF2B77A00501950 /* ViewController.swift */,
-				0E09EB6E1FF2B77A00501950 /* Main.storyboard */,
+				0E09EB801FF2E26500501950 /* Model */,
+				0E09EB7F1FF2E26000501950 /* View */,
+				0E09EB7E1FF2E25800501950 /* Controller */,
 				0E09EB711FF2B77A00501950 /* Assets.xcassets */,
-				0E09EB731FF2B77A00501950 /* LaunchScreen.storyboard */,
 				0E09EB761FF2B77A00501950 /* Info.plist */,
 				0E09EB7C1FF2B7EE00501950 /* GoogleService-Info.plist */,
 			);
 			path = PokeChat;
+			sourceTree = "<group>";
+		};
+		0E09EB7E1FF2E25800501950 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E09EB6A1FF2B77A00501950 /* AppDelegate.swift */,
+				0E09EB6C1FF2B77A00501950 /* WelcomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0E09EB7F1FF2E26000501950 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E09EB731FF2B77A00501950 /* LaunchScreen.storyboard */,
+				0E09EB6E1FF2B77A00501950 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E09EB801FF2E26500501950 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DB5C290A8BF1DD1758802312 /* Frameworks */ = {
@@ -215,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E09EB6D1FF2B77A00501950 /* ViewController.swift in Sources */,
+				0E09EB6D1FF2B77A00501950 /* WelcomeVC.swift in Sources */,
 				0E09EB6B1FF2B77A00501950 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
