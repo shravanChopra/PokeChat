@@ -49,8 +49,30 @@ class RegisterVC: UIViewController, UITextFieldDelegate, Shakeable {
                 }
                 else {
                     print ("Registration successful!!")
+                    
+                    // save pokeAvatar data and transition to Chats
+                    self.uploadPokeAvatar()
                     self.performSegue(withIdentifier: "toChatVC", sender: self)
                 }
+            }
+        }
+    }
+    
+    // Function - save the user's pokeAvatar info to DB
+    private func uploadPokeAvatar() {
+       
+        let userAvatarsDB = Database.database().reference().child("UserAvatarsDB")
+        let userAvatar = ["User": emailTextField.text!, "PokeAvatar": _pokeID]
+
+        userAvatarsDB.childByAutoId().setValue(userAvatar) {
+            
+            (error, reference) in
+            
+            if (error != nil) {
+                print (error.debugDescription)
+            }
+            else {
+                print ("User info saved successfully!")
             }
         }
     }
