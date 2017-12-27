@@ -21,6 +21,7 @@
 		0E5BF4421FF2F6A00084A4F0 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */; };
 		0E71DAEE1FF43B490074D9C0 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAED1FF43B490074D9C0 /* ChatVC.swift */; };
 		0E71DAF11FF446420074D9C0 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAF01FF446420074D9C0 /* Shakeable.swift */; };
+		0E71DAF31FF4504B0074D9C0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAF21FF4504B0074D9C0 /* LoginVC.swift */; };
 		52CDB0824DE3A07281CEB02D /* Pods_PokeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C5FA8DCC4702C2BF2344B /* Pods_PokeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		0E71DAED1FF43B490074D9C0 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		0E71DAF01FF446420074D9C0 /* Shakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
+		0E71DAF21FF4504B0074D9C0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		235F982F4E452AA4FA3B3CCE /* Pods-PokeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeChat/Pods-PokeChat.release.xcconfig"; sourceTree = "<group>"; };
 		983C5FA8DCC4702C2BF2344B /* Pods_PokeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF18B9CD5F923BEF636259 /* Pods-PokeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeChat/Pods-PokeChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				0E09EB6C1FF2B77A00501950 /* WelcomeVC.swift */,
 				0E09EB871FF2EDD500501950 /* PokeAvatarVC.swift */,
 				0E09EB851FF2ED7900501950 /* RegisterVC.swift */,
+				0E71DAF21FF4504B0074D9C0 /* LoginVC.swift */,
 				0E71DAED1FF43B490074D9C0 /* ChatVC.swift */,
 			);
 			path = Controller;
@@ -284,6 +287,7 @@
 				0E09EB6D1FF2B77A00501950 /* WelcomeVC.swift in Sources */,
 				0E09EB861FF2ED7900501950 /* RegisterVC.swift in Sources */,
 				0E09EB881FF2EDD500501950 /* PokeAvatarVC.swift in Sources */,
+				0E71DAF31FF4504B0074D9C0 /* LoginVC.swift in Sources */,
 				0E09EB6B1FF2B77A00501950 /* AppDelegate.swift in Sources */,
 				0E5BF4421FF2F6A00084A4F0 /* PokeCell.swift in Sources */,
 				0E09EB841FF2E88D00501950 /* PokeButton.swift in Sources */,

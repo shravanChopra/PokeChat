@@ -50,6 +50,9 @@
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="KWy-xu-F6M" kind="show" id="2c0-9P-TSR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gx-r8-kE2" customClass="PokeButton" customModule="PokeChat" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="80" width="175" height="50"/>
@@ -92,6 +95,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="429.375" y="34.859154929577464"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="fdx-fa-M9j">
+            <objects>
+                <viewController id="KWy-xu-F6M" customClass="LoginVC" customModule="PokeChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OBU-SO-ruE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-62-7tE">
+                                <rect key="frame" x="46" y="149" width="228" height="271"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FlC-Tj-yQJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="57"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXR-43-pWV">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="AvP-Ge-zyf"/>
+                                                    <constraint firstAttribute="width" constant="95" id="y2s-YP-zSM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abc@provider.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSe-54-Fw2">
+                                                <rect key="frame" x="0.0" y="27" width="228" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Ft4-Tt-lmJ"/>
+                                                    <constraint firstAttribute="width" constant="228" id="nae-MU-S4v"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KWy-xu-F6M" id="Lah-hf-04h"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UxM-UT-dpH">
+                                        <rect key="frame" x="0.0" y="117" width="228" height="57"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAg-qd-cHN">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="BzE-Rf-2hM"/>
+                                                    <constraint firstAttribute="width" constant="95" id="toG-V4-Yjs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum 6 characters" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Dq-cT-2fz">
+                                                <rect key="frame" x="0.0" y="27" width="228" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="228" id="irk-tc-q4P"/>
+                                                    <constraint firstAttribute="height" constant="30" id="oRe-Qm-ZKi"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KWy-xu-F6M" id="iCE-eW-UrI"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvs-Cr-a0o" customClass="PokeButton" customModule="PokeChat" customModuleProvider="target">
+                                        <rect key="frame" x="46.5" y="234" width="135" height="37"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="MxD-RB-F0i"/>
+                                            <constraint firstAttribute="width" constant="135" id="PGp-hP-dAn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="finishBtnPressed:" destination="fMP-WD-KAj" eventType="touchUpInside" id="EG7-y7-ok2"/>
+                                            <action selector="loginBtnPressed:" destination="KWy-xu-F6M" eventType="touchUpInside" id="V2F-fU-Rch"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6pd-62-7tE" firstAttribute="centerY" secondItem="OBU-SO-ruE" secondAttribute="centerY" id="eu4-1a-5S0"/>
+                            <constraint firstItem="6pd-62-7tE" firstAttribute="centerX" secondItem="OBU-SO-ruE" secondAttribute="centerX" id="h5c-YM-xFN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VCs-v8-5y9"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="PSe-54-Fw2" id="C2D-Qq-YCh"/>
+                        <outlet property="passwordTextField" destination="2Dq-cT-2fz" id="GhZ-GG-v3K"/>
+                        <segue destination="XiM-FU-oso" kind="show" identifier="toChatVC" id="iM1-X3-We7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itH-fd-Tn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711.875" y="34.859154929577464"/>
         </scene>
         <!--Poke AvatarVC-->
         <scene sceneID="nhc-6u-0du">
@@ -336,4 +442,7 @@
         <image name="1" width="96" height="96"/>
         <image name="pokeBG2" width="168" height="300"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iM1-X3-We7"/>
+    </inferredMetricsTieBreakers>
 </document>
