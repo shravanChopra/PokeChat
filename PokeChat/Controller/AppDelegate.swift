@@ -20,11 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // configure Firebase
         FirebaseApp.configure()
-        
-        // TODO: delete this later!
-        let myDB = Database.database().reference()
-        myDB.setValue("Hello from PokeChat!")
-        
+    
         return true
     }
 

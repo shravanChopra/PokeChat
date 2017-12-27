@@ -77,6 +77,15 @@ class RegisterVC: UIViewController, UITextFieldDelegate, Shakeable {
         }
     }
     
+    // Function - pass along the avatar info
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let chatVC = segue.destination as? ChatVC {
+            if let thisVC = sender as? RegisterVC {
+                chatVC.currentPokeId = thisVC._pokeID
+            }
+        }
+    }    
+    
     // -------------------------------------------------------------------------------------------
     
     // MARK - TextField protocol methods (basically to dismiss the keyboard when the user touches outside the textfields)

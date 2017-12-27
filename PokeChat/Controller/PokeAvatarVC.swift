@@ -105,7 +105,16 @@ class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toRegisterVC", sender: pokemon[indexPath.row])
+        
+        var sendingPokemon: Pokemon
+       
+        if inSearchMode {
+            sendingPokemon = filteredPokemon[indexPath.row]
+        } else {
+            sendingPokemon = pokemon[indexPath.row]
+        }
+        
+        performSegue(withIdentifier: "toRegisterVC", sender: sendingPokemon)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
