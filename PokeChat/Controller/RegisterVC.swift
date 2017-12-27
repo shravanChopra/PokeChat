@@ -62,17 +62,18 @@ class RegisterVC: UIViewController, UITextFieldDelegate, Shakeable {
     private func uploadPokeAvatar() {
        
         let userAvatarsDB = Database.database().reference().child("UserAvatarsDB")
-        let userAvatar = ["User": emailTextField.text!, "PokeAvatar": _pokeID]
-
-        userAvatarsDB.childByAutoId().setValue(userAvatar) {
-            
-            (error, reference) in
+        
+        let username = emailTextField.text!.components(separatedBy: ".")[0]
+        
+        userAvatarsDB.child(username).setValue(["PokeAvatar": _pokeID]) {
+            (error, ref) in
             
             if (error != nil) {
                 print (error.debugDescription)
             }
             else {
-                print ("User info saved successfully!")
+                print ("Registered!")
+                self.performSegue(withIdentifier: "toChatVC", sender: self)
             }
         }
     }

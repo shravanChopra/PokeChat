@@ -14,6 +14,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: ShakyTextField!
     @IBOutlet weak var passwordTextField: ShakyTextField!
     
+    // to store avatar info of logged in user
+    private var _pokeID: String!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,13 +43,38 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 }
                 else {
                     print ("Signed in successful!")
-                    self.performSegue(withIdentifier: "toChatVC", sender: self)
+                    
+                    // get avatar data and pass it along
+                    self.getAvatarData()
+                    
                 }
             })
         }
     }
     
-    // TODO - try to get the pokemon avatar data once they log in!
+    // Function - get the avatar data of current user
+    private func getAvatarData() {
+        let userAvatarsDB = Database.database().reference().child("UserAvatarsDB")
+        
+        let username = emailTextField.text!.components(separatedBy: ".")[0]
+        
+        userAvatarsDB.child(username).observeSingleEvent(of: .value) { (snapshot) in
+            
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            
+            self._pokeID = snapshotValue["PokeAvatar"]!
+            self.performSegue(withIdentifier: "toChatVC", sender: self)
+        }
+    }
+    
+    // Function - pass along pokeAvatar info
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let chatVC = segue.destination as? ChatVC {
+            if let thisVC = sender as? LoginVC {
+                chatVC.currentPokeId = thisVC._pokeID
+            }
+        }
+    }
     
     // -------------------------------------------------------------------------------------------
     
