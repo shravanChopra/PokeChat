@@ -9,11 +9,11 @@
 import UIKit
 import Firebase
 
-class RegisterVC: UIViewController, UITextFieldDelegate {
+class RegisterVC: UIViewController, UITextFieldDelegate, Shakeable {
     
     @IBOutlet weak var pokeImage: UIImageView!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: ShakyTextField!
+    @IBOutlet weak var passwordTextField: ShakyTextField!
 
     // to register pokemon avatar along with user
     private var _pokeID: String!
@@ -27,22 +27,30 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
 
         // display the correct avatar
         pokeImage.image = UIImage(named: _pokeID)
+   
     }
     
     
     // Function - registers a new user to the Firebase DB
     @IBAction func finishBtnPressed(_ sender: UIButton) {
         
-        // TODO - guard against blank text entry
-        
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-            
-            if (error != nil) {
-                print (error.debugDescription)
-            }
-            else {
-                print ("Registration successful!!")
-                self.performSegue(withIdentifier: "toChatVC", sender: self)
+        // Guard against blank text entry
+        if emailTextField.text == nil || emailTextField.text == "" {
+            emailTextField.shake()
+        }
+        else if passwordTextField.text == nil || passwordTextField.text == "" {
+            passwordTextField.shake()
+        }
+        else {
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                
+                if (error != nil) {
+                    print (error.debugDescription)
+                }
+                else {
+                    print ("Registration successful!!")
+                    self.performSegue(withIdentifier: "toChatVC", sender: self)
+                }
             }
         }
     }

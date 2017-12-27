@@ -19,8 +19,8 @@
 		0E09EB8B1FF2EEEA00501950 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0E09EB8A1FF2EEEA00501950 /* pokemon.csv */; };
 		0E09EB8D1FF2EF4800501950 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09EB8C1FF2EF4800501950 /* Pokemon.swift */; };
 		0E5BF4421FF2F6A00084A4F0 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */; };
-		0E5BF4461FF305C60084A4F0 /* PokeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BF4451FF305C60084A4F0 /* PokeTextField.swift */; };
 		0E71DAEE1FF43B490074D9C0 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAED1FF43B490074D9C0 /* ChatVC.swift */; };
+		0E71DAF11FF446420074D9C0 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAF01FF446420074D9C0 /* Shakeable.swift */; };
 		52CDB0824DE3A07281CEB02D /* Pods_PokeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C5FA8DCC4702C2BF2344B /* Pods_PokeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +39,8 @@
 		0E09EB8A1FF2EEEA00501950 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		0E09EB8C1FF2EF4800501950 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
-		0E5BF4451FF305C60084A4F0 /* PokeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeTextField.swift; sourceTree = "<group>"; };
 		0E71DAED1FF43B490074D9C0 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		0E71DAF01FF446420074D9C0 /* Shakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 		235F982F4E452AA4FA3B3CCE /* Pods-PokeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeChat/Pods-PokeChat.release.xcconfig"; sourceTree = "<group>"; };
 		983C5FA8DCC4702C2BF2344B /* Pods_PokeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF18B9CD5F923BEF636259 /* Pods-PokeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeChat/Pods-PokeChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +79,7 @@
 		0E09EB691FF2B77A00501950 /* PokeChat */ = {
 			isa = PBXGroup;
 			children = (
+				0E71DAEF1FF4462F0074D9C0 /* Extensions */,
 				0E09EB801FF2E26500501950 /* Model */,
 				0E09EB7F1FF2E26000501950 /* View */,
 				0E09EB7E1FF2E25800501950 /* Controller */,
@@ -105,11 +106,10 @@
 		0E09EB7F1FF2E26000501950 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E09EB831FF2E88D00501950 /* PokeButton.swift */,
+				0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */,
 				0E09EB731FF2B77A00501950 /* LaunchScreen.storyboard */,
 				0E09EB6E1FF2B77A00501950 /* Main.storyboard */,
-				0E09EB831FF2E88D00501950 /* PokeButton.swift */,
-				0E5BF4451FF305C60084A4F0 /* PokeTextField.swift */,
-				0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +128,14 @@
 				0E09EB8A1FF2EEEA00501950 /* pokemon.csv */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0E71DAEF1FF4462F0074D9C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E71DAF01FF446420074D9C0 /* Shakeable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DB5C290A8BF1DD1758802312 /* Frameworks */ = {
@@ -279,7 +287,7 @@
 				0E09EB6B1FF2B77A00501950 /* AppDelegate.swift in Sources */,
 				0E5BF4421FF2F6A00084A4F0 /* PokeCell.swift in Sources */,
 				0E09EB841FF2E88D00501950 /* PokeButton.swift in Sources */,
-				0E5BF4461FF305C60084A4F0 /* PokeTextField.swift in Sources */,
+				0E71DAF11FF446420074D9C0 /* Shakeable.swift in Sources */,
 				0E09EB8D1FF2EF4800501950 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
