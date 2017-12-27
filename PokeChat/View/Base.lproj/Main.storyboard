@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qox-rc-nnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1411.875" y="39.08450704225352"/>
+            <point key="canvasLocation" x="1108" y="835"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="E8V-hT-Fg5">
@@ -195,54 +195,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="7uO-sD-HEB">
-                                <rect key="frame" x="51" y="82" width="219" height="405"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="crV-ee-093">
+                                <rect key="frame" x="46" y="71.5" width="228" height="426"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="6BM-nb-9v1">
-                                        <rect key="frame" x="0.0" y="0.0" width="219" height="290"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-7I-k9T">
+                                        <rect key="frame" x="51.5" y="0.0" width="125" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="PK2-Ud-2to"/>
+                                            <constraint firstAttribute="width" constant="125" id="UrS-gH-pg8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0MW-W9-a7E">
+                                        <rect key="frame" x="0.0" y="175" width="228" height="57"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hjn-st-wp0">
-                                                <rect key="frame" x="39.5" y="0.0" width="140" height="140"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7b-Zm-LQR">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="27"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="5FN-UQ-3Pv"/>
-                                                    <constraint firstAttribute="height" constant="140" id="LlT-hP-lWj"/>
+                                                    <constraint firstAttribute="width" constant="95" id="8oU-1a-Maw"/>
+                                                    <constraint firstAttribute="height" constant="27" id="cuh-Xs-Bbp"/>
                                                 </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1Xg-p1-l8p">
-                                                <rect key="frame" x="0.0" y="190" width="219" height="100"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abc@provider.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-aS-92W" customClass="PokeTextField" customModule="PokeChat" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="219" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="219" id="UgJ-pJ-NPp"/>
-                                                        </constraints>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="43g-C4-u86" customClass="PokeTextField" customModule="PokeChat" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="70" width="219" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="219" id="UdY-6X-JN3"/>
-                                                        </constraints>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAb-4e-SHT">
+                                                <rect key="frame" x="0.0" y="27" width="228" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="228" id="DIw-sO-Ddv"/>
+                                                    <constraint firstAttribute="height" constant="30" id="zwZ-kT-s58"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w50-Gj-YvK" customClass="PokeButton" customModule="PokeChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="360" width="219" height="45"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-c4-Rgd">
+                                        <rect key="frame" x="0.0" y="282" width="228" height="57"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMM-vX-RBo">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="95" id="ba4-TS-njz"/>
+                                                    <constraint firstAttribute="height" constant="27" id="hPw-JG-Wp2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvG-OU-kYk">
+                                                <rect key="frame" x="0.0" y="27" width="228" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="djL-J3-oVC"/>
+                                                    <constraint firstAttribute="width" constant="228" id="gek-mW-Rnp"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drb-W9-Xpm" customClass="PokeButton" customModule="PokeChat" customModuleProvider="target">
+                                        <rect key="frame" x="46.5" y="389" width="135" height="37"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="219" id="Ad1-k4-ZsZ"/>
-                                            <constraint firstAttribute="height" constant="45" id="cJg-Ko-z19"/>
+                                            <constraint firstAttribute="width" constant="135" id="C9N-zG-ZSo"/>
+                                            <constraint firstAttribute="height" constant="37" id="ZUi-zf-PG5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                        <state key="normal" title="Finish">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Finish!">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -250,15 +272,33 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7uO-sD-HEB" firstAttribute="centerX" secondItem="hI2-Oz-MZ5" secondAttribute="centerX" id="Wcu-pj-dr3"/>
-                            <constraint firstItem="7uO-sD-HEB" firstAttribute="centerY" secondItem="hI2-Oz-MZ5" secondAttribute="centerY" id="fVm-Sm-vdT"/>
+                            <constraint firstItem="crV-ee-093" firstAttribute="centerY" secondItem="hI2-Oz-MZ5" secondAttribute="centerY" id="ckL-Eg-EyX"/>
+                            <constraint firstItem="crV-ee-093" firstAttribute="centerX" secondItem="hI2-Oz-MZ5" secondAttribute="centerX" id="kv3-F5-47t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hkk-0X-AKX"/>
                     </view>
+                    <connections>
+                        <segue destination="XiM-FU-oso" kind="show" identifier="toChatVC" id="L5n-V3-dD6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMa-cn-CvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2366.25" y="43.309859154929576"/>
+            <point key="canvasLocation" x="2377.5" y="834.50704225352115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="31X-wY-2fE">
+            <objects>
+                <viewController id="XiM-FU-oso" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m4T-yq-9XY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="7eh-8R-Owq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aux-uk-wU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3384" y="35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QFG-KM-6af">

@@ -12,6 +12,6 @@ class PokeTextField: UITextField {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = frame.height / 2.0
+        layer.cornerRadius = layer.frame.height / 2
     }
 }
