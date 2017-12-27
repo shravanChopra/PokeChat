@@ -218,7 +218,7 @@
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAb-4e-SHT">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abc@provider.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAb-4e-SHT">
                                                 <rect key="frame" x="0.0" y="27" width="228" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="228" id="DIw-sO-Ddv"/>
@@ -226,7 +226,10 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="fMP-WD-KAj" id="TCD-3h-gfM"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -243,7 +246,7 @@
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvG-OU-kYk">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvG-OU-kYk" customClass="PokeTextField" customModule="PokeChat" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="27" width="228" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="djL-J3-oVC"/>
@@ -251,7 +254,10 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="fMP-WD-KAj" id="vfh-jg-tzY"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -266,6 +272,9 @@
                                         <state key="normal" title="Finish!">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="finishBtnPressed:" destination="fMP-WD-KAj" eventType="touchUpInside" id="PQE-Wz-gRV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -278,6 +287,9 @@
                         <viewLayoutGuide key="safeArea" id="hkk-0X-AKX"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="YAb-4e-SHT" id="1Iq-Qg-7Fh"/>
+                        <outlet property="passwordTextField" destination="nvG-OU-kYk" id="4zv-zo-KSp"/>
+                        <outlet property="pokeImage" destination="hkd-7I-k9T" id="ct2-Mn-g6R"/>
                         <segue destination="XiM-FU-oso" kind="show" identifier="toChatVC" id="L5n-V3-dD6"/>
                     </connections>
                 </viewController>

@@ -105,14 +105,23 @@ class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        // TODO - transition to RegisterVC
-        performSegue(withIdentifier: "toRegisterVC", sender: self)
+        performSegue(withIdentifier: "toRegisterVC", sender: pokemon[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: 110, height: 110)
+    }
+    
+    // -------------------------------------------------------------------------------------------
+    
+    // Function - passes the correct pokemon avatar to the next screen
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let registerVC = segue.destination as? RegisterVC {
+            if let sendingPokemon = sender as? Pokemon {
+                registerVC.pokeID = sendingPokemon.id
+            }
+        }
     }
     
     // -------------------------------------------------------------------------------------------
