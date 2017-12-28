@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -17,14 +18,16 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         set { _currentPokeId = newValue }
     }
     
+    // to compose new messages
+    @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    
     // to adjust textfield when the keyboard appears and disappears
     @IBOutlet weak var newMsgViewHeight: NSLayoutConstraint!
     
     // to store and display all messages
     @IBOutlet weak var messagesTableView: UITableView!
-    
-    // to compose new messages
-    @IBOutlet weak var messageTextField: UITextField!
+    var messages = [Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +50,53 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         messageTextField.delegate = self
     }
     
+    
+    // Function - composes a new message and sends to Firebase DB
+    @IBAction func sendBtnPressed(_ sender: UIButton) {
+        
+        // Check for empty input
+        if !(messageTextField.text == nil || messageTextField.text == "") {
+            
+            // Disable UI
+            messageTextField.isEnabled = false
+            sendButton.isEnabled = false
+            
+            // get reference to messages database
+            let messagesDB = Database.database().reference().child("Messages")
+            let messageDict = ["Sender": Auth.auth().currentUser?.email,
+                               "Avatar": _currentPokeId,
+                               "MessageBody": messageTextField.text!]
+        
+            // create a unique ID for each message and store it
+            messagesDB.childByAutoId().setValue(messageDict) {
+                (error, reference) in
+                
+                if (error != nil) {
+                    print (error.debugDescription)
+                }
+                else {
+                    print ("Message sent successfully!")
+                    
+                    // re-enable UI
+                    self.messageTextField.isEnabled = true
+                    self.sendButton.isEnabled = true
+                    
+                    // finally, clear the textfield
+                    self.messageTextField.text = ""
+                }
+            }
+            
+        }
+    
+    
+    
+    }
+    
+    
+    
+    
+    
+    
     // ---------------------------------------------------------------------------------------------
     
     // MARK - tableView protocol methods
@@ -55,7 +105,7 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,12 +136,6 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
             self.newMsgViewHeight.constant = 60
             self.view.layoutIfNeeded()
         }
-    }
-    
-    // Function - dismiss the keyboard when the user hits 'Return'
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
     
     // Function - dismiss the keyboard once the user taps outside the textfield

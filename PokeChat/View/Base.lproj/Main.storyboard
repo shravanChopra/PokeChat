@@ -429,6 +429,9 @@
                                         <state key="normal" title="Send">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendBtnPressed:" destination="XiM-FU-oso" eventType="touchUpInside" id="ePR-RA-S8u"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -472,6 +475,7 @@
                         <outlet property="messageTextField" destination="jDP-JP-RTe" id="eg8-bR-Clu"/>
                         <outlet property="messagesTableView" destination="QZd-15-HWZ" id="3ZY-t2-x9A"/>
                         <outlet property="newMsgViewHeight" destination="iBG-WD-cnt" id="MHM-Xi-fhM"/>
+                        <outlet property="sendButton" destination="ucy-iv-kfI" id="fw5-Ze-4uj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aux-uk-wU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
