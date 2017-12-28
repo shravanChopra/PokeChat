@@ -10,8 +10,6 @@ import UIKit
 
 class ChatVC: UIViewController {
 
-    @IBOutlet weak var pokeImg: UIImageView!
-    
     // to store avatar of current user
     private var _currentPokeId: String!
     public var currentPokeId: String {
@@ -24,8 +22,6 @@ class ChatVC: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // testing avatar info
-        pokeImg.image = UIImage(named: _currentPokeId)
     }
 
     override func didReceiveMemoryWarning() {
