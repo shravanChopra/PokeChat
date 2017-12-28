@@ -39,6 +39,9 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         let tapGesture = UIGestureRecognizer(target: self, action: #selector(tappedOutside))
         messagesTableView.addGestureRecognizer(tapGesture)
        
+        // get all previous chat history
+        getChatHistory()
+        
     }
 
     // Function - does initial setup
@@ -49,7 +52,6 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         
         messageTextField.delegate = self
     }
-    
     
     // Function - composes a new message and sends to Firebase DB
     @IBAction func sendBtnPressed(_ sender: UIButton) {
@@ -63,11 +65,12 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
             
             // get reference to messages database
             let messagesDB = Database.database().reference().child("Messages")
+            
+            // compose new message and store it with a unique ID
             let messageDict = ["Sender": Auth.auth().currentUser?.email,
                                "Avatar": _currentPokeId,
                                "MessageBody": messageTextField.text!]
         
-            // create a unique ID for each message and store it
             messagesDB.childByAutoId().setValue(messageDict) {
                 (error, reference) in
                 
@@ -88,14 +91,35 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
             
         }
     
-    
-    
     }
     
+    // Function - retrieves entire chat history
+    private func getChatHistory() {
+        
+        // get reference to messages database
+        let messagesDB = Database.database().reference().child("Messages")
     
-    
-    
-    
+        // observe for new messages
+        messagesDB.observe(.childAdded) { (snapshot) in
+            
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            
+            // pull out the data
+            let sender = snapshotValue["Sender"]!
+            let pokeAvatar = snapshotValue["Avatar"]!
+            let messageText = snapshotValue["MessageBody"]!
+            
+            print("\(sender): \(pokeAvatar) wrote: \(messageText)")
+            
+            // save as a new message and add to messages array
+            self.messages.append(Message(sender: sender, pokeAvatar: pokeAvatar, messageText: messageText))
+            
+            
+            // TODO - append to messages array and display in tableView
+        
+        }
+        
+    }
     
     // ---------------------------------------------------------------------------------------------
     
