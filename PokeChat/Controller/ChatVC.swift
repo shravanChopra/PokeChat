@@ -33,25 +33,33 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        initialSetup()
+        setDelegates()
+        
+        // Register custom XIB file
+        messagesTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "MessageCell")
         
         // to dismiss keyboard when user taps outside the textfield
         let tapGesture = UIGestureRecognizer(target: self, action: #selector(tappedOutside))
         messagesTableView.addGestureRecognizer(tapGesture)
        
-        // get all previous chat history
+        // Get all previous chat history
         getChatHistory()
         
+        // Configure table view to accommodate all messages
+        configureTableView()
     }
 
     // Function - does initial setup
-    private func initialSetup() {
+    private func setDelegates() {
         messagesTableView.dataSource = self
         messagesTableView.delegate = self
         messagesTableView.separatorStyle = .none
-        
         messageTextField.delegate = self
     }
+    
+    // ---------------------------------------------------------------------------------------------
+
+    // MARK: - Sending and receiving messages from Firebase DB
     
     // Function - composes a new message and sends to Firebase DB
     @IBAction func sendBtnPressed(_ sender: UIButton) {
@@ -114,9 +122,9 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
             // save as a new message and add to messages array
             self.messages.append(Message(sender: sender, pokeAvatar: pokeAvatar, messageText: messageText))
             
-            
-            // TODO - append to messages array and display in tableView
-        
+            // update tableview
+            self.configureTableView()
+            self.messagesTableView.reloadData()        
         }
         
     }
@@ -133,17 +141,25 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let messageCell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as? MessageCell {
+            
+            messageCell.configure(from: messages[indexPath.row])
+            return messageCell
+        }
+        
         return UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+    // Function - adjust tableview to accommodate messages of varying heights
+    private func configureTableView() {
+        messagesTableView.rowHeight = UITableViewAutomaticDimension
+        messagesTableView.estimatedRowHeight = 120.0
     }
-    
     
     // ---------------------------------------------------------------------------------------------
     
-    // MARK - textfield delegate methods
+    // MARK: - textfield delegate methods
     
     // Function - increase the height of the view to accommodate the keyboard
     func textFieldDidBeginEditing(_ textField: UITextField) {

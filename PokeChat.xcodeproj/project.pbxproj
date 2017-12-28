@@ -20,6 +20,8 @@
 		0E09EB8D1FF2EF4800501950 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09EB8C1FF2EF4800501950 /* Pokemon.swift */; };
 		0E5BF4421FF2F6A00084A4F0 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */; };
 		0E60E7AC1FF59DA5006C687E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60E7AB1FF59DA5006C687E /* Message.swift */; };
+		0E60E7AF1FF5A60B006C687E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60E7AD1FF5A60B006C687E /* MessageCell.swift */; };
+		0E60E7B01FF5A60B006C687E /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E60E7AE1FF5A60B006C687E /* MessageCell.xib */; };
 		0E71DAEE1FF43B490074D9C0 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAED1FF43B490074D9C0 /* ChatVC.swift */; };
 		0E71DAF11FF446420074D9C0 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAF01FF446420074D9C0 /* Shakeable.swift */; };
 		0E71DAF31FF4504B0074D9C0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAF21FF4504B0074D9C0 /* LoginVC.swift */; };
@@ -42,6 +44,8 @@
 		0E09EB8C1FF2EF4800501950 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		0E60E7AB1FF59DA5006C687E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0E60E7AD1FF5A60B006C687E /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		0E60E7AE1FF5A60B006C687E /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		0E71DAED1FF43B490074D9C0 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		0E71DAF01FF446420074D9C0 /* Shakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 		0E71DAF21FF4504B0074D9C0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				0E5BF4411FF2F6A00084A4F0 /* PokeCell.swift */,
 				0E09EB731FF2B77A00501950 /* LaunchScreen.storyboard */,
 				0E09EB6E1FF2B77A00501950 /* Main.storyboard */,
+				0E60E7AD1FF5A60B006C687E /* MessageCell.swift */,
+				0E60E7AE1FF5A60B006C687E /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E09EB751FF2B77A00501950 /* LaunchScreen.storyboard in Resources */,
+				0E60E7B01FF5A60B006C687E /* MessageCell.xib in Resources */,
 				0E09EB721FF2B77A00501950 /* Assets.xcassets in Resources */,
 				0E09EB701FF2B77A00501950 /* Main.storyboard in Resources */,
 				0E09EB7D1FF2B7EE00501950 /* GoogleService-Info.plist in Resources */,
@@ -291,6 +298,7 @@
 				0E09EB861FF2ED7900501950 /* RegisterVC.swift in Sources */,
 				0E09EB881FF2EDD500501950 /* PokeAvatarVC.swift in Sources */,
 				0E71DAF31FF4504B0074D9C0 /* LoginVC.swift in Sources */,
+				0E60E7AF1FF5A60B006C687E /* MessageCell.swift in Sources */,
 				0E09EB6B1FF2B77A00501950 /* AppDelegate.swift in Sources */,
 				0E60E7AC1FF59DA5006C687E /* Message.swift in Sources */,
 				0E5BF4421FF2F6A00084A4F0 /* PokeCell.swift in Sources */,
