@@ -23,7 +23,7 @@ class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "CHOOSE AVATAR"
+        self.navigationItem.title = "Choose Avatar"
         
         
         

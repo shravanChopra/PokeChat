@@ -29,7 +29,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate, Shakeable {
         // display the correct avatar
         pokeImage.image = UIImage(named: _pokeID)
    
-        self.navigationItem.title = "SIGN UP"
+        self.navigationItem.title = "Sign Up"
     }
     
     

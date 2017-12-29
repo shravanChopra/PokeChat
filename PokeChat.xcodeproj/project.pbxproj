@@ -22,6 +22,7 @@
 		0E60E7AC1FF59DA5006C687E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60E7AB1FF59DA5006C687E /* Message.swift */; };
 		0E60E7AF1FF5A60B006C687E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60E7AD1FF5A60B006C687E /* MessageCell.swift */; };
 		0E60E7B01FF5A60B006C687E /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E60E7AE1FF5A60B006C687E /* MessageCell.xib */; };
+		0E60E7B21FF5C6F0006C687E /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E60E7B11FF5BE88006C687E /* Pokemon Solid.ttf */; };
 		0E71DAEE1FF43B490074D9C0 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAED1FF43B490074D9C0 /* ChatVC.swift */; };
 		0E71DAF11FF446420074D9C0 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAF01FF446420074D9C0 /* Shakeable.swift */; };
 		0E71DAF31FF4504B0074D9C0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71DAF21FF4504B0074D9C0 /* LoginVC.swift */; };
@@ -237,6 +238,7 @@
 				0E09EB701FF2B77A00501950 /* Main.storyboard in Resources */,
 				0E09EB7D1FF2B7EE00501950 /* GoogleService-Info.plist in Resources */,
 				0E09EB8B1FF2EEEA00501950 /* pokemon.csv in Resources */,
+				0E60E7B21FF5C6F0006C687E /* Pokemon Solid.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

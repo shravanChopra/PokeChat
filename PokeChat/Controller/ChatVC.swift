@@ -33,7 +33,7 @@ class ChatVC: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITabl
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "MESSAGES"
+        self.navigationItem.title = "Messages"
         
         setDelegates()
         
