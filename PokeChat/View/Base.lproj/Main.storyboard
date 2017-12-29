@@ -24,6 +24,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeBG" translatesAutoresizingMaskIntoConstraints="NO" id="7Ba-12-Mbn">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XJq-FX-6Zr">
                                 <rect key="frame" x="16" y="69.5" width="288" height="430"/>
                                 <subviews>
@@ -85,8 +88,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7Ba-12-Mbn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LCL-EF-T4c"/>
+                            <constraint firstItem="7Ba-12-Mbn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PhG-B7-Ifb"/>
                             <constraint firstItem="XJq-FX-6Zr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJc-XZ-XYs"/>
+                            <constraint firstItem="7Ba-12-Mbn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XFN-fW-CaI"/>
                             <constraint firstItem="XJq-FX-6Zr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="egc-Y5-Xk0"/>
+                            <constraint firstItem="7Ba-12-Mbn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fvc-yn-Yro"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -94,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328" y="35"/>
+            <point key="canvasLocation" x="326.25" y="34.859154929577464"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="fdx-fa-M9j">
@@ -104,6 +111,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokedexBG" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-gh-Fnw">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-62-7tE">
                                 <rect key="frame" x="46" y="149" width="228" height="271"/>
                                 <subviews>
@@ -184,8 +194,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VdQ-gh-Fnw" firstAttribute="leading" secondItem="VCs-v8-5y9" secondAttribute="leading" id="70i-kV-sWH"/>
+                            <constraint firstItem="VdQ-gh-Fnw" firstAttribute="trailing" secondItem="VCs-v8-5y9" secondAttribute="trailing" id="eQR-gK-5YU"/>
                             <constraint firstItem="6pd-62-7tE" firstAttribute="centerY" secondItem="OBU-SO-ruE" secondAttribute="centerY" id="eu4-1a-5S0"/>
+                            <constraint firstItem="VdQ-gh-Fnw" firstAttribute="top" secondItem="VCs-v8-5y9" secondAttribute="top" id="gxW-br-Bfj"/>
                             <constraint firstItem="6pd-62-7tE" firstAttribute="centerX" secondItem="OBU-SO-ruE" secondAttribute="centerX" id="h5c-YM-xFN"/>
+                            <constraint firstItem="VdQ-gh-Fnw" firstAttribute="bottom" secondItem="VCs-v8-5y9" secondAttribute="bottom" id="ucz-m8-niF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VCs-v8-5y9"/>
                     </view>
@@ -301,6 +315,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeBG3" translatesAutoresizingMaskIntoConstraints="NO" id="anD-R6-bcy">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="crV-ee-093">
                                 <rect key="frame" x="46" y="71.5" width="228" height="426"/>
                                 <subviews>
@@ -387,8 +404,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="anD-R6-bcy" firstAttribute="top" secondItem="hkk-0X-AKX" secondAttribute="top" id="0ln-AM-VKm"/>
                             <constraint firstItem="crV-ee-093" firstAttribute="centerY" secondItem="hI2-Oz-MZ5" secondAttribute="centerY" id="ckL-Eg-EyX"/>
+                            <constraint firstItem="anD-R6-bcy" firstAttribute="leading" secondItem="hkk-0X-AKX" secondAttribute="leading" id="eMg-qh-tIC"/>
+                            <constraint firstItem="anD-R6-bcy" firstAttribute="bottom" secondItem="hkk-0X-AKX" secondAttribute="bottom" id="gEw-4G-PiH"/>
                             <constraint firstItem="crV-ee-093" firstAttribute="centerX" secondItem="hI2-Oz-MZ5" secondAttribute="centerX" id="kv3-F5-47t"/>
+                            <constraint firstItem="anD-R6-bcy" firstAttribute="trailing" secondItem="hkk-0X-AKX" secondAttribute="trailing" id="xDT-vu-IyV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hkk-0X-AKX"/>
                     </view>
@@ -411,6 +432,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeBG" translatesAutoresizingMaskIntoConstraints="NO" id="xdc-Rw-aGF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHD-ss-qj3">
                                 <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                                 <subviews>
@@ -446,7 +470,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-15-HWZ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="436"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ACD-rE-YOi">
@@ -456,6 +480,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -464,10 +489,14 @@
                         <constraints>
                             <constraint firstItem="xHD-ss-qj3" firstAttribute="leading" secondItem="7eh-8R-Owq" secondAttribute="leading" id="5NJ-JC-QRc"/>
                             <constraint firstItem="xHD-ss-qj3" firstAttribute="trailing" secondItem="7eh-8R-Owq" secondAttribute="trailing" id="5fs-m4-FGb"/>
+                            <constraint firstItem="xdc-Rw-aGF" firstAttribute="leading" secondItem="7eh-8R-Owq" secondAttribute="leading" id="7oo-BE-HU1"/>
                             <constraint firstItem="QZd-15-HWZ" firstAttribute="top" secondItem="7eh-8R-Owq" secondAttribute="top" id="8Je-Yi-wUQ"/>
+                            <constraint firstItem="xdc-Rw-aGF" firstAttribute="bottom" secondItem="7eh-8R-Owq" secondAttribute="bottom" id="9AU-b7-dKE"/>
                             <constraint firstItem="xHD-ss-qj3" firstAttribute="bottom" secondItem="7eh-8R-Owq" secondAttribute="bottom" id="DEW-dg-NZq"/>
                             <constraint firstItem="QZd-15-HWZ" firstAttribute="trailing" secondItem="7eh-8R-Owq" secondAttribute="trailing" id="Gbz-Uc-brI"/>
+                            <constraint firstItem="xdc-Rw-aGF" firstAttribute="top" secondItem="m4T-yq-9XY" secondAttribute="top" id="V4t-1G-CE8"/>
                             <constraint firstItem="xHD-ss-qj3" firstAttribute="top" secondItem="QZd-15-HWZ" secondAttribute="bottom" constant="8" id="bwY-XF-Oci"/>
+                            <constraint firstItem="xdc-Rw-aGF" firstAttribute="trailing" secondItem="7eh-8R-Owq" secondAttribute="trailing" id="m2b-Ad-9I8"/>
                             <constraint firstItem="QZd-15-HWZ" firstAttribute="leading" secondItem="7eh-8R-Owq" secondAttribute="leading" id="m3b-ut-BCz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7eh-8R-Owq"/>
@@ -481,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aux-uk-wU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3881" y="68"/>
+            <point key="canvasLocation" x="3879.375" y="67.605633802816897"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QFG-KM-6af">
@@ -493,7 +522,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.0" blue="1" alpha="0.5638060774539877" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="23"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -509,9 +538,12 @@
     </scenes>
     <resources>
         <image name="1" width="96" height="96"/>
+        <image name="pokeBG" width="750" height="1334"/>
         <image name="pokeBG2" width="168" height="300"/>
+        <image name="pokeBG3" width="576" height="1024"/>
+        <image name="pokedexBG" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iM1-X3-We7"/>
+        <segue reference="L5n-V3-dD6"/>
     </inferredMetricsTieBreakers>
 </document>

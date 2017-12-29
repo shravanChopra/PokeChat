@@ -44,14 +44,14 @@ class MessageCell: UITableViewCell {
         currentUserAvatar.image = UIImage(named: pokeAvatar)
         
         msgBackgroundView.backgroundColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 0.8984614647)
-        senderLbl.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        senderLbl.textColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
         senderLbl.textAlignment = .right
         msgTextLbl.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         msgTextLbl.textAlignment = .right
     }
     
     private func setupAsOther(_ pokeAvatar: String) {
-        otherUserAvatar.isHidden = true
+        otherUserAvatar.isHidden = false
         otherUserAvatar.image = UIImage(named: pokeAvatar)
         currentUserAvatar.isHidden = true
 

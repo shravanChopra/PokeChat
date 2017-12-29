@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class RegisterVC: UIViewController, UITextFieldDelegate, Shakeable {
     
@@ -35,6 +36,8 @@ class RegisterVC: UIViewController, UITextFieldDelegate, Shakeable {
     // Function - registers a new user to the Firebase DB
     @IBAction func finishBtnPressed(_ sender: UIButton) {
         
+        SVProgressHUD.show()
+        
         // Guard against blank text entry
         if emailTextField.text == nil || emailTextField.text == "" {
             emailTextField.shake()
@@ -50,6 +53,8 @@ class RegisterVC: UIViewController, UITextFieldDelegate, Shakeable {
                 }
                 else {
                     print ("Registration successful!!")
+                    
+                    SVProgressHUD.dismiss()
                     
                     // save pokeAvatar data and transition to Chats
                     self.uploadPokeAvatar()

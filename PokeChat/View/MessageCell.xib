@@ -27,16 +27,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxF-o1-aK7">
-                        <rect key="frame" x="74" y="12" width="172" height="50"/>
+                        <rect key="frame" x="77" y="12" width="166" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NR2-Ow-LW9">
-                                <rect key="frame" x="8" y="8" width="156" height="18"/>
+                                <rect key="frame" x="8" y="8" width="150" height="18"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                 <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="messages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBV-xP-d6w">
-                                <rect key="frame" x="8" y="29" width="156" height="21"/>
+                                <rect key="frame" x="8" y="29" width="150" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -53,21 +53,24 @@
                             <constraint firstItem="fBV-xP-d6w" firstAttribute="leading" secondItem="IxF-o1-aK7" secondAttribute="leading" constant="8" id="w5I-ng-4ih"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-5g-5Qf">
-                        <rect key="frame" x="16" y="12" width="50" height="50"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-5g-5Qf">
+                        <rect key="frame" x="16" y="12" width="53" height="53"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="HRK-TU-KfU"/>
-                            <constraint firstAttribute="height" constant="50" id="Pzn-Pf-hRD"/>
+                            <constraint firstAttribute="width" constant="53" id="HRK-TU-KfU"/>
+                            <constraint firstAttribute="height" constant="53" id="Pzn-Pf-hRD"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="tp9-GX-HVr">
-                        <rect key="frame" x="254" y="12" width="50" height="50"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="tp9-GX-HVr">
+                        <rect key="frame" x="251" y="12" width="53" height="53"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="biU-34-WT9"/>
-                            <constraint firstAttribute="width" constant="50" id="c6m-Ur-ZgN"/>
+                            <constraint firstAttribute="height" constant="53" id="biU-34-WT9"/>
+                            <constraint firstAttribute="width" constant="53" id="c6m-Ur-ZgN"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="tp9-GX-HVr" firstAttribute="leading" secondItem="IxF-o1-aK7" secondAttribute="trailing" constant="8" id="3Ec-Ub-0vT"/>
                     <constraint firstItem="tp9-GX-HVr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="5He-Ae-PPe"/>
@@ -79,6 +82,7 @@
                     <constraint firstItem="tp9-GX-HVr" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="zc8-yW-Crh"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="currentUserAvatar" destination="tp9-GX-HVr" id="9KR-Zd-rH8"/>

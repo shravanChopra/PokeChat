@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class LoginVC: UIViewController, UITextFieldDelegate {
 
@@ -27,6 +28,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 
     @IBAction func loginBtnPressed(_ sender: UIButton) {
         
+        SVProgressHUD.show()
+        
         // Guard against blank text entry
         if emailTextField.text == nil || emailTextField.text == "" {
             emailTextField.shake()
@@ -45,9 +48,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 else {
                     print ("Signed in successful!")
                     
+                    SVProgressHUD.dismiss()
+                    
                     // get avatar data and pass it along
                     self.getAvatarData()
-                    
                 }
             })
         }

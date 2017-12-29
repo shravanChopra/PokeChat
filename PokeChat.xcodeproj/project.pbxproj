@@ -46,6 +46,7 @@
 		0E60E7AB1FF59DA5006C687E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0E60E7AD1FF5A60B006C687E /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		0E60E7AE1FF5A60B006C687E /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		0E60E7B11FF5BE88006C687E /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		0E71DAED1FF43B490074D9C0 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		0E71DAF01FF446420074D9C0 /* Shakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 		0E71DAF21FF4504B0074D9C0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		0E09EB891FF2EED000501950 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0E60E7B11FF5BE88006C687E /* Pokemon Solid.ttf */,
 				0E09EB8A1FF2EEEA00501950 /* pokemon.csv */,
 			);
 			path = Resources;
@@ -445,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BLB2JL8QD7;
 				INFOPLIST_FILE = PokeChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myowntime.PokeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BLB2JL8QD7;
 				INFOPLIST_FILE = PokeChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myowntime.PokeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
