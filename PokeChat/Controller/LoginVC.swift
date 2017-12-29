@@ -22,6 +22,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "LOGIN"
     }
 
     @IBAction func loginBtnPressed(_ sender: UIButton) {

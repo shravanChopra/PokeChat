@@ -12,14 +12,17 @@ import Firebase
 class MessageCell: UITableViewCell {
 
     // to display message info
-    @IBOutlet weak var otherUserAvatar: UIImageView!
-    @IBOutlet weak var currentUserAvatar: UIImageView!
-    @IBOutlet weak var msgTextLbl: UILabel!
-    @IBOutlet weak var senderLbl: UILabel!
-
+    @IBOutlet var otherUserAvatar: UIImageView!
+    @IBOutlet var currentUserAvatar: UIImageView!
+    @IBOutlet var msgTextLbl: UILabel!
+    @IBOutlet var senderLbl: UILabel!
+    @IBOutlet var msgBackgroundView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        msgBackgroundView.layer.cornerRadius = 10
     }
 
     func configure(from message: Message) {
@@ -37,13 +40,25 @@ class MessageCell: UITableViewCell {
     
     private func setupAsCurrentUser(_ pokeAvatar: String) {
         otherUserAvatar.isHidden = true
+        currentUserAvatar.isHidden = false
         currentUserAvatar.image = UIImage(named: pokeAvatar)
-   
-        // TODO - change background and text colors!
+        
+        msgBackgroundView.backgroundColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 0.8984614647)
+        senderLbl.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        senderLbl.textAlignment = .right
+        msgTextLbl.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        msgTextLbl.textAlignment = .right
     }
     
     private func setupAsOther(_ pokeAvatar: String) {
+        otherUserAvatar.isHidden = true
         otherUserAvatar.image = UIImage(named: pokeAvatar)
         currentUserAvatar.isHidden = true
+
+        senderLbl.textColor = #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1)
+        msgTextLbl.textColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
+        msgBackgroundView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        msgTextLbl.textAlignment = .left
+        senderLbl.textAlignment = .left
     }
 }

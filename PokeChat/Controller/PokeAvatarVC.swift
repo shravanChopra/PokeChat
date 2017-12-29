@@ -23,6 +23,9 @@ class PokeAvatarVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "CHOOSE AVATAR"
+        
+        
         
         // set this VC as datasource and delegate of collection view
         pokemonCollectionView.dataSource = self
